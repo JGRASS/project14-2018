@@ -10,6 +10,7 @@ public class Restoran implements RestoranInterfejs {
 	@Override
 	public void poruciArtikal(Artikal a) {
 		
+		SODodajArtikal.izvrsi(a, racun);
 		
 	}
 
