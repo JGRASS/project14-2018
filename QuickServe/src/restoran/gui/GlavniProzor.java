@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import artikal.Artikal;
+import restoran.gui.kontroler.GUIKontroler;
 
 import javax.swing.JTabbedPane;
 import javax.swing.JButton;
@@ -162,7 +163,7 @@ public class GlavniProzor extends JFrame {
 			button.setIcon(new ImageIcon(GlavniProzor.class.getResource("/hrana/hrana.jpg")));
 			button.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					//prikaz hrana prozor
+					GUIKontroler.prikaziHranaProzor();
 					
 				}
 			});
