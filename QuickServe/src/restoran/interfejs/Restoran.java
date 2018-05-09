@@ -22,8 +22,7 @@ public class Restoran implements RestoranInterfejs {
 
 	@Override
 	public LinkedList<Artikal> vratiRacun() {
-		// TODO Auto-generated method stub
-		return null;
+		return racun;
 	}
 
 }
