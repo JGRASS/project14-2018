@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import artikal.Artikal;
 import restoran.sistemskeoperacije.SODodajArtikal;
+import restoran.sistemskeoperacije.SORacunZaUkupanIznosRacuna;
 
 public class Restoran implements RestoranInterfejs {
 	public LinkedList<Artikal> racun = new LinkedList<Artikal>();
@@ -16,8 +17,7 @@ public class Restoran implements RestoranInterfejs {
 
 	@Override
 	public double racunaUkupanIznosRacuna() {
-		// TODO Auto-generated method stub
-		return 0;
+		return SORacunZaUkupanIznosRacuna.izvrsi(racun);
 	}
 
 	@Override
