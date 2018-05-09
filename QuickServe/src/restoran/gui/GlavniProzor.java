@@ -215,6 +215,7 @@ public class GlavniProzor extends JFrame {
 			btnRacun.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					//ispis racuna i prikaz kod konobara
+					GUIKontroler.racunTextArea();
 				}
 			});
 			btnRacun.setBounds(403, 194, 105, 58);
@@ -257,7 +258,7 @@ public class GlavniProzor extends JFrame {
 					sastojci.add("Spagete");
 					Artikal a = new Artikal(640, "Pasta sa piletinom i pesto sosom",
 							"/hrana/Patsa sa piletinom i pestom.JPG", sastojci, "pa");
-					//dijalog za potvrdu
+					GUIKontroler.prikaziPotvrdiPorudzbinuHraneDijalog(a);
 					
 				}
 			});
@@ -296,7 +297,7 @@ public class GlavniProzor extends JFrame {
 			btnNewButton_1.setIcon(new ImageIcon(GlavniProzor.class.getResource("/pica/kafa.jpg")));
 			btnNewButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					// prozor pica happy hour
+					GUIKontroler.prikaziPicaProzorHappyHour();
 				}
 			});
 			btnNewButton_1.setBounds(347, 131, 143, 144);
