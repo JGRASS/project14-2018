@@ -14,9 +14,10 @@ import com.google.gson.GsonBuilder;
 import artikal.Artikal;
 import restoran.gui.GlavniProzor;
 import restoran.gui.HranaProzor;
+import restoran.gui.PicaProzor;
 import restoran.gui.PicaProzorHappyHour;
 import restoran.gui.PotvrdiPorudzbinuHraneDijalog;
-
+import restoran.gui.PotvrdiPorudzbinuPicaDijalog;
 import restoran.gui.PotvrdiPorudzbinuPicaHappyHour;
 import restoran.interfejs.Restoran;
 import restoran.interfejs.RestoranInterfejs;
@@ -45,7 +46,12 @@ public class GUIKontroler {
 		hp.setLocationRelativeTo(gp);
 		hp.setVisible(true);
 	}
-
+	public static void prikaziPicaProzor() {
+		PicaProzor pp = new PicaProzor();
+		pp.setLocationRelativeTo(gp);
+		pp.setVisible(true);
+		
+	}
 	public static void poruci(Artikal a, LinkedList<String> izabraniSastojci) {
 		a.sastojci = izabraniSastojci;
 		restoran.poruciArtikal(a);
@@ -103,5 +109,9 @@ public class GUIKontroler {
 		dij.setLocationRelativeTo(gp);
 		dij.setVisible(true);
 	}
-	
+	public static void prikaziPotvrdiPorudzbinuPicaDijalog(Artikal a) {
+		PotvrdiPorudzbinuPicaDijalog dij = new PotvrdiPorudzbinuPicaDijalog(a);
+		dij.setLocationRelativeTo(gp);
+		dij.setVisible(true);
+	}
 }

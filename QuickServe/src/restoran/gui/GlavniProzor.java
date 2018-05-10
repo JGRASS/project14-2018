@@ -178,7 +178,7 @@ public class GlavniProzor extends JFrame {
 			button_1.setIconTextGap(1);
 			button_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					//prikaz pica prozor
+					GUIKontroler.prikaziPicaProzor();
 				}
 			});
 			button_1.setBounds(85, 291, 408, 138);
