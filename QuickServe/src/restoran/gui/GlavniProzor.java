@@ -1,7 +1,7 @@
 package restoran.gui;
 
 import java.awt.BorderLayout;
-
+import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -147,7 +147,9 @@ public class GlavniProzor extends JFrame {
 			JButton btnPozoviKonobara = new JButton("Pozovi konobara");
 			btnPozoviKonobara.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					//prikaz konobarevog prozora
+					GUIKontroler.prikaziKonobarProzorPomoc();
+					KonobarovPrikaz.btnSto.setBackground(Color.RED);
+					KonobarovPrikaz.textAreaSto.setText("Potrebni ste stolu broj 1!");
 				}
 			});
 			btnPozoviKonobara.setFont(new Font("BalloonExtra", Font.PLAIN, 11));
@@ -214,8 +216,17 @@ public class GlavniProzor extends JFrame {
 			btnRacun = new JButton("RACUN");
 			btnRacun.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					//ispis racuna i prikaz kod konobara
+
 					GUIKontroler.racunTextArea();
+					
+					GUIKontroler.prikaziKonobarProzor(null);
+					KonobarovPrikaz.btnSto.setBackground(Color.RED);
+					if(!KonobarovPrikaz.textAreaSto.getText().isEmpty()) {
+						KonobarovPrikaz.textAreaSto.setText(null);
+					}
+					textArea.setText(null);
+					KonobarovPrikaz.textAreaSto.setText("Racun za sto 1, iznos: "+GUIKontroler.restoran.racunaUkupanIznosRacuna());
+					KonobarovPrikaz.labelRacun.setText(GUIKontroler.restoran.racunaUkupanIznosRacuna()+"");
 				}
 			});
 			btnRacun.setBounds(403, 194, 105, 58);
@@ -339,7 +350,14 @@ public class GlavniProzor extends JFrame {
 			btnPoruci = new JButton("PORUCI");
 			btnPoruci.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					//prikazi konobar i ispisi tamo
+					GUIKontroler.prikaziKonobarProzor(null);
+					KonobarovPrikaz.btnSto.setBackground(Color.RED);
+					porudzbina = textArea.getText();
+					if(!textArea.getText().isEmpty()) {
+						textArea.setText(null);
+		
+					}
+					KonobarovPrikaz.textAreaSto.setText(null);
 					
 				}
 			});

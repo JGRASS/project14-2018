@@ -72,7 +72,7 @@ public class KonobarovPrikaz extends JFrame {
 			btnSto.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
-					// pritisak na dugme sto 1
+					KonobarovPrikaz.textAreaSto.append(GlavniProzor.porudzbina);
 					
 				}
 			});
