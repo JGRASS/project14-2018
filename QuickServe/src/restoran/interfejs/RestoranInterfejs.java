@@ -16,8 +16,6 @@ public interface RestoranInterfejs {
 	 * Metoda koja dodaje artikal u racun
 	 * 
 	 * @param Artikal
-	 *            a
-	 * 
 	 */
 
 	public void poruciArtikal(Artikal a);
